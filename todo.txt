@@ -1,0 +1,2 @@
+The ClientOnly.txt file is needed if there is any hydration error comes when it times to connect more files or database and system  So for now as it is not needed just let it be if there comes any those type of error then see the video from 36.00 minute to fix it again.
+If there is any error through prisma Schema then see the video throgh 1:40:00 for re write evry thing carefully.
