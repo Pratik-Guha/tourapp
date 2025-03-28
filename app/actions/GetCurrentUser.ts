@@ -7,7 +7,7 @@ export async function getSession() {
     return await getServerSession(authOptions);
 }
 
-export default async function getCurrentUser() {
+export  async function getCurrentUser() {
     try {
         const session = await getSession();
         if (!session?.user?.email) {
@@ -27,6 +27,8 @@ export default async function getCurrentUser() {
             updatedAt: currentUser.updatedAt.toISOString(),
             emailVerified: currentUser.emailVerified?.toISOString() || null
         }
+
+    
         
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {

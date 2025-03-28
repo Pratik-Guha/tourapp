@@ -6,7 +6,7 @@ import  ClientOnly from "./components/ClientOnly";
 import { RegisterModel } from "./components/models/RegisterModel";
 import { ToastProvider } from "./providers/ToastProvider";
 import { LoginModel } from "./components/models/LoginModel";
-import getCurrentUser from "./actions/GetCurrentUser";
+import getCurrentUser from "./actions/getCurrentUser";
 import { Navbar } from "./components/navbar/Navbar";
 import { RentModel } from "./components/models/RentModel";
 import SearchModel from "./components/models/SearchModel";

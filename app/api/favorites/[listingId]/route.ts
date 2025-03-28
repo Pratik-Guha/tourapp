@@ -1,12 +1,14 @@
-import getCurrentUser from "@/app/actions/GetCurrentUser"
-import { type NextRequest, NextResponse} from "next/server"
-import prisma from "@/app/libs/prismadb"
+import { NextResponse } from "next/server"
 
-export async function POST(request: NextRequest, { params }: { params: { listingId: string } }) {
+import prisma from "@/app/libs/prismadb"
+import { getCurrentUser } from "@/app/actions/getCurrentUser"
+
+// POST handler to add a listing to favorites
+export async function POST(request: Request, { params }: { params: { listingId: string } }) {
   const currentUser = await getCurrentUser()
 
   if (!currentUser) {
-    return new NextResponse("Unauthorized", { status: 401 })
+    return NextResponse.error()
   }
 
   const { listingId } = params
@@ -31,11 +33,12 @@ export async function POST(request: NextRequest, { params }: { params: { listing
   return NextResponse.json(user)
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { listingId: string } }) {
+// DELETE handler to remove a listing from favorites
+export async function DELETE(request: Request, { params }: { params: { listingId: string } }) {
   const currentUser = await getCurrentUser()
 
   if (!currentUser) {
-    return new NextResponse("Unauthorized", { status: 401 })
+    return NextResponse.error()
   }
 
   const { listingId } = params
