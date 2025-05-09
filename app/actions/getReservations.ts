@@ -1,13 +1,14 @@
 import prisma from "@/app/libs/prismadb";
 
-interface Iparams {
+interface IParams {
     listingId?:string;
     userId?:string;
     authorId?:string;
 }
 
-export default async function getReservations(params:Iparams) {
+export default async function getReservations(paramsPromise: Promise<IParams>) {
     try {
+        const params = await paramsPromise;
         const {listingId,userId,authorId}=params;
     
         // eslint-disable-next-line @typescript-eslint/no-explicit-any

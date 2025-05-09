@@ -4,47 +4,43 @@ import prisma from "@/app/libs/prismadb"
 import { getCurrentUser } from "@/app/actions/getCurrentUser"
 
 // POST handler to add a listing to favorites
-export async function POST(request: Request, { params }: { params: { listingId: string } }) {
-  const currentUser = await getCurrentUser()
-
-  if (!currentUser) {
-    return NextResponse.error()
-  }
-
-  const { listingId } = params
+import { NextRequest } from 'next/server';
+export async function POST(request: NextRequest, context: {params: {listingId: string}}) {
+  const { listingId } = context.params;
 
   if (!listingId || typeof listingId !== "string") {
-    throw new Error("Invalid ID")
+    throw new Error("Invalid ID");
   }
 
-  const favoriteIds = [...(currentUser.favoriteIds || [])]
+  const currentUser = await getCurrentUser();
+  if (!currentUser) {
+    return NextResponse.error();
+  }
 
-  favoriteIds.push(listingId)
+  const favoriteIds = [...(currentUser.favoriteIds || [])];
+  favoriteIds.push(listingId);
 
   const user = await prisma.user.update({
-    where: {
-      id: currentUser.id,
-    },
-    data: {
-      favoriteIds,
-    },
-  })
+    where: { id: currentUser.id },
+    data: { favoriteIds },
+  });
 
-  return NextResponse.json(user)
+  return NextResponse.json(user);
 }
 
 // DELETE handler to remove a listing from favorites
-export async function DELETE(request: Request, { params }: { params: { listingId: string } }) {
-  const currentUser = await getCurrentUser()
+export async function DELETE(request : NextRequest, context: { params: { listingId: string}}) {
+  const { params } = context; // Extract params properly
+    const listingId = params?.listingId; // Ensure it's correctly accessed
+
+    if (!listingId || typeof listingId !== "string") {
+        throw new Error("Invalid ID");
+    }
+
+    const currentUser = await getCurrentUser();
 
   if (!currentUser) {
     return NextResponse.error()
-  }
-
-  const { listingId } = params
-
-  if (!listingId || typeof listingId !== "string") {
-    throw new Error("Invalid ID")
   }
 
   let favoriteIds = [...(currentUser.favoriteIds || [])]

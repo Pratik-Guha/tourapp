@@ -5,9 +5,9 @@ interface IParams{
     listingId:string;
 }
 
-export default async function getListingById(params:IParams) {
+export default async function getListingById(paramsPromise: Promise<IParams>) {
     try {
-        
+        const params = await paramsPromise;
         const {listingId}=params;
 
         const listing=await prisma.listing.findUnique({

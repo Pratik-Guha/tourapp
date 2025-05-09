@@ -14,6 +14,8 @@ export default async function getListings(
     params: IListingsParams={}
 ) {
     try {
+        const awaitedParams = await params; // Ensure params are awaited before destructuring
+
         const {
             userId,
             guestCount,
@@ -23,7 +25,7 @@ export default async function getListings(
             endDate,
             locationValue,
             category,
-        } = params;
+        } = awaitedParams;
 
         // eslint-disable-next-line prefer-const, @typescript-eslint/no-explicit-any
         let query: any = {};
