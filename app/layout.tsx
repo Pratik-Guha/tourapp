@@ -10,6 +10,7 @@ import {getCurrentUser} from "./actions/getCurrentUser";
 import { Navbar } from "./components/navbar/Navbar";
 import { RentModel } from "./components/models/RentModel";
 import SearchModel from "./components/models/SearchModel";
+import ThemeToggleButton from "./toggle";
 
 const nunito = Nunito({
   
@@ -32,7 +33,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.className}  antialiased`}
+        className={`${nunito.className}bg-gray-600  dark:bg-neutral-700 text-black dark:text-white  antialiased`}
       >
         <ClientOnly>
           <ToastProvider/>
@@ -41,6 +42,7 @@ export default async function RootLayout({
           <LoginModel/>
           <RegisterModel/>
         <Navbar currentUser={currentUser}/>
+        <ThemeToggleButton/>
         </ClientOnly>
         <div className="pb-20 pt-28">
         {children}
