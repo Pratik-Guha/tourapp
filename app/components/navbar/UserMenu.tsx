@@ -70,6 +70,9 @@ export const UserMenu:React.FC<UserMenuProps>=({currentUser})=>{
                             onClick={()=>router.push('/reservations')}
                             label="My reservations"/>
                             <MenuItem 
+                            label="Transportation" 
+                            onClick={()=>router.push('/transportation')}/>
+                            <MenuItem 
                             onClick={()=>router.push('/spots')}
                             label="The spots"/>
                             <MenuItem 

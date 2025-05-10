@@ -60,6 +60,7 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
             <div className="text-lg font-light text-neutral-500">{description}</div>
             <hr />
             <Map center={coOrdinates} />
+           
         </div>
      );
 }

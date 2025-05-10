@@ -60,8 +60,8 @@ const ListingCard:React.FC<ListingCardProps>=({
     <div onClick={()=>router.push(`/listings/${data.id}`)}
     className="col-span-1 cursor-pointer group"
     >
-      <div className="flex flex-col gap-2 w-full">
-        <div className="aspect-square w-full relative overflow-hidden border-2 rounded-xl">
+      <div className="flex flex-col gap-2 w-full hover:shadow-2xl rounded-xl shadow-yellow-400 transition-all duration-300">
+        <div className="aspect-square w-full relative overflow-hidden border-2 rounded-xl  dark:border-yellow-200 border-yellow-700">
             <Image alt="Listing" fill src={data.imageSrc} 
             className="object-cover h-full w-full group-hover:scale-110 transition"/>
             <div className="absolute top-3 right-3">

@@ -118,7 +118,7 @@ export default function SearchModel() {
   }, [step]);
 
   let bodyContent = (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 text-black">
       <Heading
         title="Where do you want to go?"
         subtitle="Find the perfect location!"
@@ -149,7 +149,7 @@ export default function SearchModel() {
 
   if (step === STEPS.INFO) {
     bodyContent = (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 text-black">
         <Heading title="More information" subtitle="Find your perfect place!" />
         <Counter
           title="Guests"
@@ -174,7 +174,7 @@ export default function SearchModel() {
   }
   if (step === STEPS.AMOUNT) {
     bodyContent = (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 text-black">
         <Heading
           title="Price Range"
           subtitle="How much do you want to spend?"
@@ -183,7 +183,7 @@ export default function SearchModel() {
           type="number"
           value={price}
           onChange={(e) => setPrice(Number(e.target.value))}
-          className="w-full p-2 border border-gray-300 rounded-md"
+          className="w-full p-2 border border-gray-300 rounded-md text-black"
           placeholder="Enter your maximum price (in $)"
         />
       </div>
