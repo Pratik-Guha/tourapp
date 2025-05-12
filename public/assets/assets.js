@@ -27,6 +27,9 @@ import roomImg1 from './roomImg1.png'
 import roomImg2 from './roomImg2.png'
 import roomImg3 from './roomImg3.png'
 import roomImg4 from './roomImg4.png'
+import roomImg5 from './roomimg5.webp'
+import roomImg6 from './roomImg6.webp'
+import roomImg7 from './roomImg7.webp'
 import regImage from './regImage.png'
 import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.png";
 import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.png";
@@ -37,7 +40,11 @@ import listIcon from "./listIcon.svg";
 import uploadArea from "./uploadArea.svg";
 import totalBookingIcon from "./totalBookingIcon.svg";
 import totalRevenueIcon from "./totalRevenueIcon.svg";
-
+import balcony from "./balcony.svg";
+import jacuzzi from "./jacuzzi.svg"
+import park from "./park.svg"
+import wave from "./wave.svg"
+import owner from './owner.png'
 
 export const assets = {
     logo,
@@ -72,14 +79,118 @@ export const assets = {
     uploadArea,
     totalBookingIcon,
     totalRevenueIcon,
+    balcony,
+    jacuzzi,
+    wave,
+    park
+
 }
 
 export const cities = [
-    "Dubai",
-    "Singapore",
-    "New York",
-    "London",
+  "Agra",
+  "Ahmedabad",
+  "Aizawl",
+  "Ajmer",
+  "Alappuzha",
+  "Amritsar",
+  "Aurangabad",
+  "Ayodhya",
+  "Badrinath",
+  "Bangalore",
+  "Bhopal",
+  "Bhubaneswar",
+  "Bikaner",
+  "Bodh Gaya",
+  "Chandigarh",
+  "Chennai",
+  "Cherrapunji",
+  "Coimbatore",
+  "Coonoor",
+  "Darjeeling",
+  "Dharamshala",
+  "Diu",
+  "Dooars",
+  "Dwarka",
+  "Gangtok",
+  "Gaya",
+  "Goa",
+  "Gokarna",
+  "Gulmarg",
+  "Gurgaon",
+  "Guwahati",
+  "Hampi",
+  "Haridwar",
+  "Hyderabad",
+  "Imphal",
+  "Indore",
+  "Jaisalmer",
+  "Jammu",
+  "Jodhpur",
+  "Junagadh",
+  "Kanchipuram",
+  "Kanpur",
+  "Kanyakumari",
+  "Kargil",
+  "Karwar",
+  "Kaziranga",
+  "Kedarnath",
+  "Kochi",
+  "Kodaikanal",
+  "Kolhapur",
+  "Kolkata",
+  "Kollam",
+  "Kovalam",
+  "Kozhikode",
+  "Kullu",
+  "Kumarakom",
+  "Kurukshetra",
+  "Leh",
+  "Lucknow",
+  "Ludhiana",
+  "Madurai",
+  "Mahabalipuram",
+  "Manali",
+  "Mandi",
+  "Mangalore",
+  "Mathura",
+  "Mount Abu",
+  "Munnar",
+  "Mussoorie",
+  "Mysore",
+  "Nagpur",
+  "Nainital",
+  "Nashik",
+  "New Delhi",
+  "Ooty",
+  "Pahalgam",
+  "Panaji",
+  "Patna",
+  "Pondicherry",
+  "Porbandar",
+  "Prayagraj",
+  "Pune",
+  "Pushkar",
+  "Ranchi",
+  "Rishikesh",
+  "Sarnath",
+  "Shillong",
+  "Shimla",
+  "Shirdi",
+  "Sikkim",
+  "Srinagar",
+  "Surat",
+  "Thanjavur",
+  "Thiruvananthapuram",
+  "Tirupati",
+  "Udaipur",
+  "Ujjain",
+  "Vadodara",
+  "Varanasi",
+  "Varkala",
+  "Vijayawada",
+  "Visakhapatnam"
 ];
+
 
 // Exclusive Offers Dummy Data
 export const exclusiveOffers = [
@@ -96,7 +207,7 @@ export const testimonials = [
 ];
 
 // Facility Icon
-export const facilityIcons = {
+export const facilityIcons= {
     "Free WiFi": assets.freeWifiIcon,
     "Free Breakfast": assets.freeBreakfastIcon,
     "Room Service": assets.roomServiceIcon,
@@ -117,7 +228,7 @@ export const userDummyData = {
     "_id": "user_2unqyL4diJFP1E3pIBnasc7w8hP",
     "username": "Great Stack",
     "email": "user.greatstack@gmail.com",
-    "image": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzJ2N2c5YVpSSEFVYVUxbmVYZ2JkSVVuWnFzWSJ9",
+    "image": owner,
     "role": "hotelOwner",
     "createdAt": "2025-03-25T09:29:16.367Z",
     "updatedAt": "2025-04-10T06:34:48.719Z",
@@ -171,7 +282,7 @@ export const roomsDummyData = [
         "roomType": "Double Bed",
         "pricePerNight": 399,
         "amenities": ["Room Service", "Mountain View", "Pool Access"],
-        "images": [roomImg1, roomImg2, roomImg3, roomImg4],
+        "images": [roomImg5, roomImg2, roomImg3, roomImg4],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:26:04.013Z",
         "updatedAt": "2025-04-10T06:26:04.013Z",
@@ -182,7 +293,7 @@ export const roomsDummyData = [
     "roomType": "Suite",
     "pricePerNight": 499,
     "amenities": ["Sea View", "Jacuzzi", "Private Balcony"],
-    "images": [roomImg1, roomImg2],
+    "images": [roomImg1, roomImg2,roomImg5,roomImg6],
     "isAvailable": true,
     "createdAt": "2025-05-10T10:00:00.000Z",
     "updatedAt": "2025-05-10T10:00:00.000Z",
@@ -194,7 +305,7 @@ export const roomsDummyData = [
     "roomType": "Deluxe Room",
     "pricePerNight": 349,
     "amenities": ["Garden View", "Room Service", "Free Breakfast"],
-    "images": [roomImg3, roomImg4],
+    "images": [roomImg3, roomImg4,roomImg6,roomImg7],
     "isAvailable": true,
     "createdAt": "2025-05-10T11:00:00.000Z",
     "updatedAt": "2025-05-10T11:00:00.000Z",
@@ -218,7 +329,7 @@ export const roomsDummyData = [
         "roomType": "Double Bed",
         "pricePerNight": 249,
         "amenities": ["Free WiFi", "Free Breakfast", "Room Service"],
-        "images": [roomImg3, roomImg4, roomImg1, roomImg2],
+        "images": [roomImg7, roomImg4, roomImg1, roomImg2],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:24:06.285Z",
         "updatedAt": "2025-04-10T06:24:06.285Z",

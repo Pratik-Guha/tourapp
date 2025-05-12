@@ -26,3 +26,6 @@ body {
   width: 100% !important;
   font-size: 16px !important;
 }
+.ownernav{
+  @apply flex items-center justify-between px-4 md:px-8 border-b-2 border-yellow-300 py-3 transition-all duration-300 ease-in-out;
+}

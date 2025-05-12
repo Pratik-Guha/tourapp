@@ -9,12 +9,11 @@ import Link from "next/link";
 
 const SpotsClient = () => {
     const pathname = usePathname();
-    const isOwnerPath = pathname.includes('owner');
+    const isOwnerPath = pathname?.includes('owner');
      const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Hotels', path: '/spots/hotels' },
         { name: 'Contact', path: '/spots/contacts' },
-        { name: 'About', path: '/spots' },
         { name: 'My Bookings', path: '/spots/bookings' },
     ];
 
