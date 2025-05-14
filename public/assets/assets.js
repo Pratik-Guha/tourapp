@@ -226,8 +226,8 @@ export const roomCommonData = [
 // User Dummy Data
 export const userDummyData = {
     "_id": "user_2unqyL4diJFP1E3pIBnasc7w8hP",
-    "username": "Great Stack",
-    "email": "user.greatstack@gmail.com",
+    "username": "Pratik Guha",
+    "email": "user.pratik@gmail.com",
     "image": owner,
     "role": "hotelOwner",
     "createdAt": "2025-03-25T09:29:16.367Z",

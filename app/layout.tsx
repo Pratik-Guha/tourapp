@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
@@ -11,6 +12,7 @@ import { Navbar } from "./components/navbar/Navbar";
 import { RentModel } from "./components/models/RentModel";
 import SearchModel from "./components/models/SearchModel";
 import ThemeToggleButton from "./toggle";
+import ChatbaseWidget from "./components/ChatBot";
 
 const nunito = Nunito({
   
@@ -31,6 +33,7 @@ export default async function RootLayout({
 }>) {
   const currentUser = await getCurrentUser();
   return (
+    
     <html lang="en">
       <body
         className={`${nunito.className}bg-gray-600  dark:bg-neutral-700 text-black dark:text-white  antialiased`}
@@ -46,8 +49,10 @@ export default async function RootLayout({
         </ClientOnly>
         <div className="pb-20 pt-28">
         {children}
+        <ChatbaseWidget />
         </div>
       </body>
     </html>
+     
   );
 }

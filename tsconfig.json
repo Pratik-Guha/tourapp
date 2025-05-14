@@ -35,7 +35,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/owner/list-rooms"  ],
   "exclude": [
     "node_modules"
   ]
